@@ -1,6 +1,6 @@
 {
 	"name": "broadlinkts-rm",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "TypeScript reimplementation of broadlinkjs-rm, providing discovery and control for Broadlink RM devices. Credits: broadlinkjs-rm (lprhodes).",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
