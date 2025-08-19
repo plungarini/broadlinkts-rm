@@ -16,13 +16,13 @@ It provides an easy way to **discover and control Broadlink RM devices** (IR and
 ## Installation
 
 ```bash
-npm install broadlinkjs-rm-ts
+npm install broadlinkts-rm
 ```
 
 ## Usage
 
 ```ts
-import Broadlink from 'broadlinkjs-rm-ts';
+import Broadlink from "broadlinkts-rm";
 
 // Create a Broadlink instance
 const broadlink = new Broadlink();
@@ -31,16 +31,16 @@ const broadlink = new Broadlink();
 broadlink.discover();
 
 // When a device is found and ready to use
-broadlink.on('deviceReady', (device) => {
-	console.log('✅ Device discovered:', device.host);
+broadlink.on("deviceReady", (device) => {
+  console.log("✅ Device discovered:", device.host);
 
-	// Put the device into learning mode
-	device.enterLearning();
+  // Put the device into learning mode
+  device.enterLearning();
 
-	// Listen for learned IR/RF codes
-	device.on('rawData', (data: Buffer) => {
-		console.log('📡 Learned code:', data.toString('hex'));
-	});
+  // Listen for learned IR/RF codes
+  device.on("rawData", (data: Buffer) => {
+    console.log("📡 Learned code:", data.toString("hex"));
+  });
 });
 ```
 
